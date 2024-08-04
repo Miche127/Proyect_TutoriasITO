@@ -1,11 +1,11 @@
 # Proyect_TutoriasITO
 
-#Descripción
+# Descripción
 El programa de tutorías en Java es una aplicación robusta diseñada para gestionar de manera eficiente la interacción entre administradores, tutores y alumnos en un entorno educativo. Utiliza una base de datos compuesta por cinco tablas: usuarios, alumnos, tutores, cursos y materias. Al iniciar el programa, los usuarios se autentican a través de un sistema de login que detecta su nivel de acceso, el cual puede ser administrador o tutor. Dependiendo del nivel de usuario, se despliega una versión específica de la interfaz. Los administradores tienen acceso a funciones avanzadas como la consulta y gestión de alumnos, tutores y materias. Pueden agregar, eliminar y actualizar los registros de alumnos, así como asignarles cursos. Asimismo, tienen la capacidad de gestionar tutores y asociar materias a cursos. Además, los administradores pueden crear nuevos usuarios con nivel de acceso de administrador.
 
 En la versión para tutores, el programa presenta los cursos que han sido asignados a cada tutor. Los tutores pueden abrir archivos PDF relacionados con los cursos y consultar información detallada de los alumnos inscritos en sus cursos. La interfaz es intuitiva y permite una navegación fácil para realizar todas estas acciones. Este enfoque asegura que los administradores puedan mantener una supervisión y gestión detallada de todos los componentes educativos, mientras que los tutores pueden centrarse en sus cursos y los alumnos que enseñan. Con esta organización, el programa facilita una gestión educativa eficiente y estructurada, adaptándose a las necesidades específicas de administradores y tutores.
 
-#Compatibilidad:
+# Compatibilidad:
 Version de Java
 JDK 18
 mySQL Workbench 8.0 CE
@@ -20,12 +20,13 @@ javax-ejb
 javax.faces-api-2.0
 mail
 
-#Como utilizar
+# Como utilizar
 
 Para utilizar el programa de tutorías en Java, siga las instrucciones detalladas a continuación. Al iniciar la aplicación, se le pedirá que ingrese su nombre de usuario y contraseña en la pantalla de inicio de sesión. Dependiendo de su nivel de acceso, será dirigido a la versión correspondiente del programa: administrador o tutor.
 
 Video de funcionalidad : https://youtu.be/vJdvU05lM50
-Para Administradores:
+
+# Administradores:
 Inicio de sesión:
 
 Ingrese sus credenciales de administrador.
@@ -45,7 +46,8 @@ Puede asignar materias a cursos, agregar nuevas materias o eliminar las existent
 Creación de nuevos usuarios:
 
 Desde cualquiera de las opciones mencionadas, puede acceder a la funcionalidad para crear nuevos usuarios de nivel administrador.
-Para Tutores:
+
+# Tutores:
 Inicio de sesión:
 
 Ingrese sus credenciales de tutor.
