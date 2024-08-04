@@ -62,3 +62,20 @@ Mis Alumnos:
 Seleccione esta opción para consultar la información de los alumnos inscritos en sus cursos.
 Puede buscar alumnos específicos y ver detalles relevantes sobre su inscripción y progreso.
 Estas instrucciones le permitirán aprovechar al máximo las funcionalidades del programa de tutorías, ya sea gestionando los diferentes componentes como administrador o accediendo a los recursos y datos necesarios para la enseñanza como tutor.
+
+# API
+
+Paquete controlador
+Clase conexion
+Descripcion de la clase conexion
+La clase Conexion contiene varios métodos públicos y campos privados para gestionar la conexión a la base de datos. A continuación, se presenta una tabla con la descripción de cada método y campo:
+
+Campos
+
+|     Tipo      |     Campo     |    Descripción                 |
+| ------------- | ------------- |--------------------------------|
+|    String     | URL           |URL de la base de datos.        |
+|    String     | USER          |Usuario de la base de datos.    |
+|   String      |	PASSWORD	    |Contraseña de la base de datos. |
+
+
