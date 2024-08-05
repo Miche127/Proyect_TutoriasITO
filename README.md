@@ -78,4 +78,169 @@ Campos
 |    String     | USER          |Usuario de la base de datos.    |
 |   String      |	PASSWORD	    |Contraseña de la base de datos. |
 
+Constructores
 
+|  Constructor  |              Descripción                        |
+| ------------- | ------------------------------------------------|
+|  Conexion()	  |Constructor por defecto que inicializa la clase  |
+
+Métodos públicos
+
+| Método	      |Retorno	   | Parámetros	|Descripción                                        |                                        
+|---------------|------------|------------|---------------------------------------------------|
+| getConexion() |	Connection | -	        |Obtiene y retorna una conexión a la base de datos. |
+
+Paquete modelo
+Clase AccesoAlumnos
+Descripción de la clase AccesoAlumnos
+La clase AccesoAlumnos contiene varios métodos públicos y campos privados para gestionar la interacción con la tabla alumnos en la base de datos. A continuación, se presenta una tabla con la descripción de cada método.
+
+Métodos públicos
+|Método	                                            | Retorno     |	Parámetros	                  |           Descripción                                                       |
+|---------------------------------------------------|-------------|-------------------------------|-----------------------------------------------------------------------------|
+|getAlumnos()	                                      | List<Alumno>|	 -	                          |Obtiene una lista de todos los alumnos de la base de datos.
+|obtenerAlumno(int id)	                            |Alumno	      |int id	                        |Obtiene un alumno específico por su número de control.
+|asignarMateria(int numControl, int idMateria)	    |boolean	    |int numControl, int idMateria  |Asigna una materia a un alumno específico.
+|obtenerAlumnoPorIdMateria(int idMateria)	          |Alumno	      |int idMateria	                |Obtiene un alumno específico por el ID de la materia.
+|getAlumnosPorIdMateria(int idMateria)	            |List<Alumno>	|int idMateria	                |Obtiene una lista de alumnos que están inscritos en una materia específica.
+|obtenerAlumnoPorNombre(String nombre)	            |Alumno	      |String nombre	                |Obtiene un alumno específico por su nombre.
+|agregarAlumno(Alumno alumno)	                      |void	        |Alumno alumno                  |Agrega un nuevo alumno a la base de datos.
+|actualizarAlumno(Alumno alumno)	                  |boolean	    |Alumno alumno                  |Actualiza los datos de un alumno existente en la base de datos.
+|eliminarAlumno(int numControl)                   	|boolean	    | int numControl	              |Elimina un alumno de la base de datos por su número de control.
+
+Clase AccesoCursos
+Descripción de la clase AccesoCursos
+La clase AccesoCursos contiene varios métodos públicos para gestionar la interacción con la tabla curso en la base de datos. A continuación, se presenta una tabla con la descripción de cada método.
+
+Métodos públicos
+|Método	                                                                              |   Retorno         |	Parámetros	                                                          |            Descripción                                      |
+|-------------------------------------------------------------------------------------|-------------------|-----------------------------------------------------------------------|-------------------------------------------------------------|
+|getCursos()	                                                                        | List<Curso>	      |-	                                                                    |Obtiene una lista de todos los cursos de la base de datos.   |
+|obtenerCursoPorMateria(int idMateria)	                                              |Curso	            | int idMateria                                                        	|Obtiene un curso específico por su ID de materia.            |
+|obtenerCursoPorTutor(int idTutor)	                                                  | Curso	            | int idTutor	                                                          |Obtiene un curso específico por su ID de tutor.              |
+|asignarCurso(int idTutor, int idMateria, Time horaInicio, Time horaFin, String aula)	| boolean	          | int idTutor, int idMateria, Time horaInicio, Time horaFin, String aula|Asigna un curso a un tutor para una materia específica.      |
+|insertarCurso(Curso curso)	                                                          | void	            |   Curso curso	                                                        |Inserta un nuevo curso en la base de datos.                  |
+|getCursosPorTutor(int idTutor)	List<Curso>	                                          | int               | idTutor	                                                              |Obtiene una lista de cursos asignados a un tutor específico. |
+
+Clase AccesoMaterias
+Descripción de la clase AccesoMaterias
+La clase AccesoMaterias proporciona métodos públicos para gestionar la interacción con la tabla materias en la base de datos. A continuación, se presenta una tabla con la descripción de cada método.
+
+Métodos públicos
+|         Método	                       |   Retorno        |     	Parámetros	 |               Descripción
+|----------------------------------------|------------------|--------------------|--------------------------------------------------
+|getMaterias()	List<Materia>	-	Obtiene una lista de todas las materias de la base de datos.
+|getMateriasFiltro(String carrera, int semestre)	List<Materia>	String carrera, int semestre	Obtiene una lista de materias filtradas por carrera y semestre.
+|obtenerMateria(int id)	Materia	int id	Obtiene una materia específica por su ID.
+|obtenerMateriasPorId(int id)	List<Materia>	int id	Obtiene una lista de materias por su ID.
+|obtenerMateriasPorNombre(String nombre)	List<Materia>	String nombre	Obtiene una lista de materias filtradas por nombre.
+|obtenerMateriaPorNombre(String nombre)	Materia	String nombre	Obtiene una materia específica por su nombre.
+
+
+Clase AccesoTutores
+Descripción de la clase AccesoTutores
+La clase AccesoTutores proporciona métodos públicos para gestionar la interacción con la tabla tutores en la base de datos. A continuación, se presenta una tabla con la descripción de cada método.
+
+Métodos públicos
+Método	Retorno	Parámetros	Descripción
+getTutores()	List<Tutor>	-	Obtiene una lista de todos los tutores de la base de datos.
+obtenerTutor(int id)	Tutor	int id	Obtiene un tutor específico por su RFC.
+obtenerTutorconID(int id)	Tutor	int id	Obtiene un tutor específico por su ID.
+getTutorconCorreo(String email)	Tutor	String email	Obtiene un tutor específico por su correo electrónico.
+agregarTutor(String nombre, String Apaterno, String AMaterno, int rfc, String numC, String Correo)	boolean	String nombre, String Apaterno, String AMaterno, int rfc, String numC, String Correo	Agrega un nuevo tutor a la base de datos.
+actualizarTutor(Tutor tutor)	boolean	Tutor tutor	Actualiza la información de un tutor en la base de datos.
+eliminarTutor(int id)	boolean	int id	Elimina un tutor de la base de datos por su ID.
+Clase AccesoUsuarios
+Descripción de la clase AccesoUsuarios
+La clase AccesoUsuarios proporciona métodos públicos para gestionar la interacción con la tabla usuarios en la base de datos. A continuación, se presenta una tabla con la descripción de cada método.
+
+Métodos públicos
+Método	Retorno	Parámetros	Descripción
+getUsuarios(String email)	Usuario	String email	Obtiene un usuario específico por su correo electrónico.
+agregarUsuario(String correo, String contraseña, int nivel, String user)	boolean	String correo, String contraseña, int nivel, String user	Agrega un nuevo usuario a la base de datos.
+Clase Alumno
+Descripción de la clase Alumno
+La clase Alumno representa a un estudiante con información relevante como su número de control, nombre, apellidos, semestre, carrera, materia y correo electrónico. A continuación, se presenta una tabla con la descripción de cada método.
+
+Métodos públicos
+Método	Retorno	Parámetros	Descripción
+getNombre()	String	-	Obtiene el nombre del alumno.
+setNombre(String nombre)	void	String nombre	Establece el nombre del alumno.
+getAPaterno()	String	-	Obtiene el apellido paterno del alumno.
+setAPaterno(String APaterno)	void	String APaterno	Establece el apellido paterno del alumno.
+getAMaterno()	String	-	Obtiene el apellido materno del alumno.
+setAMaterno(String AMaterno)	void	String AMaterno	Establece el apellido materno del alumno.
+getSemestre()	int	-	Obtiene el semestre del alumno.
+setSemestre(int semestre)	void	int semestre	Establece el semestre del alumno.
+getCarrera()	String	-	Obtiene la carrera del alumno.
+setCarrera(String carrera)	void	String carrera	Establece la carrera del alumno.
+getMateria()	int	-	Obtiene la materia del alumno.
+setMateria(int materia)	void	int materia	Establece la materia del alumno.
+getNumControl()	int	-	Obtiene el número de control del alumno.
+setNumControl(int numControl)	void	int numControl	Establece el número de control del alumno.
+getCorreo()	String	-	Obtiene el correo electrónico del alumno.
+setCorreo(String correo)	void	String correo	Establece el correo electrónico del alumno.
+Clase Curso
+Descripción de la clase Curso
+La clase Curso representa un curso impartido por un tutor en una materia específica, incluyendo información sobre los horarios y el aula donde se imparte. A continuación, se presenta una tabla con la descripción de cada método.
+
+Métodos públicos
+Método	Retorno	Parámetros	Descripción
+getIdCurso()	int	-	Obtiene el ID del curso.
+setIdCurso(int idCurso)	void	int idCurso	Establece el ID del curso.
+getIdTutor()	int	-	Obtiene el ID del tutor asignado al curso.
+setIdTutor(int idTutor)	void	int idTutor	Establece el ID del tutor asignado al curso.
+getIdMateria()	int	-	Obtiene el ID de la materia del curso.
+setIdMateria(int idMateria)	void	int idMateria	Establece el ID de la materia del curso.
+getHoraInicio()	Time	-	Obtiene la hora de inicio del curso.
+setHoraInicio(Time horaInicio)	void	Time horaInicio	Establece la hora de inicio del curso.
+getHoraFin()	Time	-	Obtiene la hora de fin del curso.
+setHoraFin(Time horaFin)	void	Time horaFin	Establece la hora de fin del curso.
+getAula()	String	-	Obtiene el aula donde se imparte el curso.
+setAula(String aula)	void	String aula	Establece el aula donde se imparte el curso.
+Clase Materia
+Descripción de la clase Materia
+La clase Materia representa una materia que puede ser asignada a los alumnos, incluyendo información sobre su nombre, capacidad, carrera y semestre. A continuación, se presenta una tabla con la descripción de cada método.
+
+Métodos públicos
+Método	Retorno	Parámetros	Descripción
+getId()	int	-	Obtiene el ID de la materia.
+setId(int id)	void	int id	Establece el ID de la materia.
+getNombre()	String	-	Obtiene el nombre de la materia.
+setNombre(String nombre)	void	String nombre	Establece el nombre de la materia.
+getCapacidad()	int	-	Obtiene la capacidad de la materia.
+setCapacidad(int capacidad)	void	int capacidad	Establece la capacidad de la materia.
+getCarrera()	String	-	Obtiene la carrera a la que pertenece la materia.
+setCarrera(String carrera)	void	String carrera	Establece la carrera a la que pertenece la materia.
+getSemestre()	int	-	Obtiene el semestre al que pertenece la materia.
+setSemestre(int semestre)	void	int semestre	Establece el semestre al que pertenece la materia.
+Clase Tutor
+Descripción de la clase Tutor
+La clase Tutor representa un tutor que puede guiar a los alumnos en su aprendizaje. Incluye información como su nombre, apellidos, RFC, número de teléfono y correo electrónico. A continuación, se presenta una tabla con la descripción de cada método.
+
+Métodos públicos
+Método	Retorno	Parámetros	Descripción
+getId()	int	-	Obtiene el ID del tutor.
+setId(int id)	void	int id	Establece el ID del tutor.
+getRfc()	int	-	Obtiene el RFC del tutor.
+setRfc(int rfc)	void	int rfc	Establece el RFC del tutor.
+getNombre()	String	-	Obtiene el nombre del tutor.
+setNombre(String nombre)	void	String nombre	Establece el nombre del tutor.
+getAPaterno()	String	-	Obtiene el apellido paterno del tutor.
+setAPaterno(String APaterno)	void	String APaterno	Establece el apellido paterno del tutor.
+getAMaterno()	String	-	Obtiene el apellido materno del tutor.
+setAMaterno(String AMaterno)	void	String AMaterno	Establece el apellido materno del tutor.
+getNumTel()	String	-	Obtiene el número de teléfono del tutor.
+setNumTel(String numTel)	void	String numTel	Establece el número de teléfono del tutor.
+getCorreo()	String	-	Obtiene el correo electrónico del tutor.
+setCorreo(String correo)	void	String correo	Establece el correo electrónico del tutor.
+Clase Usuario
+Descripción de la clase Usuario
+La clase Usuario representa un usuario del sistema, que incluye información sobre su correo electrónico, contraseña, nivel de acceso y nombre de usuario. A continuación, se presenta una tabla con la descripción de cada método.
+
+Métodos públicos
+Método	Retorno	Parámetros	Descripción
+getCorreo()	String	-	Obtiene el correo electrónico del usuario.
+getContraseña()	String	-	Obtiene la contraseña del usuario.
+getNivel()	int	-	Obtiene el nivel de acceso del usuario.
+getUsuario()	String	-	Obtiene el nombre de usuario.
